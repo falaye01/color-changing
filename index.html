@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Changing Color</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-500">
+    <div class="ml-[1000px] mt-[300px] ">
+        <div class="h-[400px] w-[800px] border-solid border-2 border-black-500 rounded-xl" id="box"></div><br>
+        <input id="input" class="w-[400px] ml-40  h-20 border-2 border-black-500 text-2xl text-black-800 rounded-xl pl-2 outline-none bg-slate-100" type="text"  placeholder="Type any color of your choice">
+        <footer class="text-3xl font-bold text-red-800 mt-[270px] ml-36">Develop by ComradeDev</footer>
+   </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const box = document.getElementById("box");
+      const input = document.getElementById("input");
+      
+      if (box && input) {
+        input.addEventListener("input", function() {
+          box.style.backgroundColor = input.value;
+        });
+      } else {
+        console.error("Elements not found");
+      }
+    });
+  </script>
+</body>
+</html>
